@@ -1,10 +1,5 @@
 import discord
 import asyncio
-import dict
-import os
-import values
-import replit
-import colorama as cr
 
 from discord.ext import commands
 from discord import Game
@@ -14,13 +9,12 @@ from discord import Role
 from discord import Emoji
 from discord.utils import get
 from fuzzywuzzy import process
-from keep_alive import keep_alive
 
 intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='-', intents=intents)
 
-TOKEN = ['']
+TOKEN = ['ODI0MzgyMzcyMDMyMTUxNjMz.YFuj6Q.jJTg04zDCbCzcT0GIXLRgdw9AGo']
 
 @bot.event
 async def on_ready():
@@ -31,7 +25,7 @@ async def on_ready():
   await bot.change_presence(status=discord.Status.dnd, activity=Playing)
   print("loaded!")
   await asyncio.sleep(1)
-  print(f"{cr.Fore.GREEN} Client connected as @{bot.user.name}#{bot.user.discriminator}")
+  print(f"Client connected as @{bot.user.name}#{bot.user.discriminator}")
 
 @bot.event
 async def on_message(message):
@@ -4431,7 +4425,6 @@ async def members(ctx, *args):
         await ctx.send(embed=em)
 
 try:
-  keep_alive()
   bot.run(TOKEN)
 except Exception as e:
   print(e)
