@@ -15,7 +15,7 @@ intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='-', intents=intents)
 
-TOKEN = os.getenv['.env']
+token = os.getenv("DISCORD_BOT_TOKEN")
 
 @bot.event
 async def on_ready():
@@ -4426,6 +4426,6 @@ async def members(ctx, *args):
         await ctx.send(embed=em)
 
 try:
-  bot.run(TOKEN)
+  bot.run(token)
 except Exception as e:
   print(e)
