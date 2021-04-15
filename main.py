@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 
 from discord.ext import commands
 from discord import Game
@@ -14,7 +15,7 @@ intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='-', intents=intents)
 
-TOKEN = ['ODI0MzgyMzcyMDMyMTUxNjMz.YFuj6Q.jJTg04zDCbCzcT0GIXLRgdw9AGo']
+TOKEN = os.getenv['.env']
 
 @bot.event
 async def on_ready():
