@@ -20,7 +20,7 @@ intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='-', intents=intents)
 
-TOKEN = os.environ['.env']
+TOKEN = ['']
 
 @bot.event
 async def on_ready():
